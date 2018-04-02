@@ -54,5 +54,19 @@ The access token timeout is checked, and if it is expired, the tool will automat
 
 The output of `kcinit token` can be captured in an environment variable.  All interactive actions are all done on stderr.
 
-To logout, just type `kcinit logout`.  This will remove any 
+To logout, just type `kcinit logout`.  This will remove any token files that were created because of a login or an exchange.
+
+
+Hacking and Contributing
+-----
+
+    $ go install
+
+That's it.  Note that all dependencies must be in the vendor directory.  We manage dependencies with the [dep](https://github.com/golang/dep)
+command line tool.  You must run:
+
+    $ dep ensure
+
+This command will pull in any dependencies into the vendor directory.
+
      

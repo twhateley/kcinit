@@ -67,8 +67,8 @@ func tokenOutput(token *AccessTokenResponse, tokenType string) {
     } else {
         var data ExecCredential
         json.Unmarshal([]byte(execInfo), &data)
-        console.Writeln("KUBERNETES_EXEC_INFO", execInfo)
-        console.Writeln()
+        console.Traceln("KUBERNETES_EXEC_INFO", execInfo)
+        console.Traceln()
         output := map[string]interface{} {
             "apiVersion": "client.authentication.k8s.io/v1alpha1",
             "kind": "ExecCredential",
